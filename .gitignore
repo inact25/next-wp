@@ -32,6 +32,7 @@ yarn-error.log*
 
 # vercel
 .vercel
+.env
 
 public/wp-search.json
 public/feed.xml
@@ -43,3 +44,5 @@ public/images/og
 .vscode/
 # Local Netlify folder
 .netlify
+
+.idea

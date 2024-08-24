@@ -18,6 +18,7 @@ import Metadata from 'components/Metadata';
 import FeaturedImage from 'components/FeaturedImage';
 
 import styles from 'styles/pages/Post.module.scss';
+import { findAndReplaceSrc } from '../../lib/util';
 
 export default function Post({ post, socialImage, related }) {
   const {
@@ -102,7 +103,7 @@ export default function Post({ post, socialImage, related }) {
             <div
               className={styles.content}
               dangerouslySetInnerHTML={{
-                __html: content,
+                __html: findAndReplaceSrc(content, homepage),
               }}
             />
           </Container>

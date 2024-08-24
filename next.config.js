@@ -3,7 +3,7 @@ const feed = require('./plugins/feed');
 const sitemap = require('./plugins/sitemap');
 // const socialImages = require('./plugins/socialImages'); TODO: failing to run on Netlify
 
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -32,6 +32,7 @@ const nextConfig = {
     WORDPRESS_GRAPHQL_ENDPOINT: process.env.WORDPRESS_GRAPHQL_ENDPOINT,
     WORDPRESS_MENU_LOCATION_NAVIGATION: process.env.WORDPRESS_MENU_LOCATION_NAVIGATION || 'PRIMARY',
     WORDPRESS_PLUGIN_SEO: parseEnvValue(process.env.WORDPRESS_PLUGIN_SEO, false),
+    WORDPRESS_ENDPOINT: process.env.WORDPRESS_ENDPOINT,
   },
 };
 
